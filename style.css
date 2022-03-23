@@ -1,0 +1,415 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,700&family=Montserrat:wght@400;600&display=swap');
+
+/* Variables */
+:root {
+  --accent: #422057ff;
+  --mainColor: #fcf951ff;
+  --bold: 600;
+
+  --montserrat: 'Montserrat', sans-serif;
+  --container-height: 51rem;
+  --container-width: min(100%, 81.5625rem);
+  --box-height: min(100%, 50.3125rem);
+  --box-width: min(100%, 40.3125rem);
+
+  --fontSize: 1.9ch;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: var(--montserrat);
+  font-weight: normal;
+  margin: 0 auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html button {
+  cursor: pointer;
+}
+
+.header {
+  text-align: center;
+  padding-top: 0.5em;
+}
+
+/* First container  */
+
+.first-container {
+  display: grid;
+  grid-template-columns: 1fr 5px 1fr;
+  grid-template-areas: 'box-1 . box-2';
+
+  width: var(--container-width);
+  height: var(--container-height);
+  padding: 5px;
+
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+.box-1,
+.box-2 {
+  width: var(--box-width);
+  height: var(--box-height);
+  background-color: var(--accent);
+}
+
+.box-1 {
+  grid-area: box-1;
+}
+
+.box-2 {
+  grid-area: box-2;
+}
+
+.container-button {
+  height: var(--box-height);
+  width: var(--box-width);
+  font-weight: var(--bold);
+  font-size: var(--fontSize);
+  text-align: center;
+
+  background-color: var(--mainColor);
+  background-repeat: no-repeat;
+  border: transparent;
+  transition: 0.8s transform, 1.2s width;
+}
+
+.first-container img {
+  display: block;
+  max-height: 20em;
+  max-width: 100%;
+  margin-top: -18.3em;
+  margin-bottom: -1.3em;
+}
+
+.container-button span {
+  position: relative;
+  top: 120px;
+  
+  font-size: var(--fontSize);
+  font-style: italic;
+}
+
+.container-button:hover {
+  transform: scale(0.95);
+  border-radius: 5px;
+}
+
+/* Second container  */
+
+.second-container {
+  width: var(--container-width);
+  height: var(--container-height);
+
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 0.5fr;
+  grid-template-rows: 0.5fr 1fr 0.5fr;
+  grid-template-areas:
+    '. header .'
+    'img img img '
+    'options . specs ';
+
+  grid-row-gap: 3rem;
+
+  animation: fadeInRight 1s ease;
+  background: linear-gradient(var(--accent), 50%, var(--mainColor) 50%);
+  border-style: solid;
+  border-color: black;
+  border-width: 5px;
+  padding: 5px;
+}
+
+.second-container h1 {
+  grid-area: header;
+
+  color: white;
+
+  text-align: left;
+  padding-left: 1em;
+  padding-top: 1em;
+  font-weight: 600;
+  font-size: 2.2rem;
+}
+
+.second-container img {
+  grid-area: img;
+  width: 30%;
+  height: auto;
+  max-width: 35rem;
+  max-height: 35rem;
+}
+
+/* Product options */
+
+.product-options {
+  grid-area: options;
+
+  width: min(100%, 18rem);
+  height: 28.5rem;
+  margin-top: -13rem;
+
+  background-color: #fffdfd;
+  border-radius: 10px;
+
+  border: 0;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.185);
+}
+
+.product-options div {
+  text-align: left;
+  padding-top: 0.8rem;
+  padding-left: 0.8rem;
+  font-size: 1.8ch;
+  font-weight: var(--bold);
+}
+
+.product-options button {
+  width: 3.125rem;
+  height: 3.125rem;
+  margin-top: 1rem;
+
+  border-radius: 50%;
+  border-width: 1.5px;
+  border-style: solid;
+  border-color: #808080;
+  background-color: white;
+
+  font-weight: 700;
+  font-size: 0.7rem;
+}
+
+.color-div button[id='1'] {
+  background-color: #e4e5e7;
+}
+.color-div button[id='2'] {
+  background-color: #babbc0;
+}
+
+.product-options span {
+  font-size: 1.1rem;
+}
+
+.product-options .buy-button {
+  display: flex;
+
+  min-width: 16.8rem;
+  min-height: 4rem;
+
+  margin-left: 0.5rem;
+  padding-left: 20px;
+
+  border-radius: 10px;
+  border-style: none;
+  background-color: #d2232a;
+}
+
+.buy-button span {
+  align-self: center;
+  justify-self: flex-start;
+  font-size: 2.2ch;
+  font-weight: 600;
+  color: #fffdfd;
+}
+
+/* /Product options */
+
+/* Shopping cart img*/
+
+.buy-button img {
+  align-self: center;
+
+  width: 3.4rem;
+  height: 3.4rem;
+
+  margin-left: 6.9rem;
+  padding: 15px;
+
+  border-radius: 10px;
+  background-color: rgb(178, 29, 35);
+}
+/* /Shopping cart img*/
+
+/* Product info */
+
+.product-info {
+  grid-area: specs;
+}
+
+.product-info .full-specs {
+  user-select: none;
+  margin: 0 auto;
+
+  transition: 0.4s;
+
+  background-color: #efefef;
+  border-style: none;
+  border-radius: 10px;
+
+  font-weight: var(--bold);
+  font-size: 1.5ch;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.185);
+}
+
+.product-info .cost {
+  width: 16.5em;
+  height: 4.3em;
+
+  margin: 1em 1em;
+  padding-left: 20px;
+  padding-top: 1.6em;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.185);
+
+  text-align: left;
+  font-weight: 600;
+  font-size: 1em;
+  background-color: white;
+}
+/* /Product info */
+
+/* Full specs button */
+
+.full-specs {
+  display: block;
+
+  width: 16.5em;
+  height: 4.3em;
+  padding: 18px;
+  padding-top: 10px;
+
+  color: #444;
+  font-size: 15px;
+  background-color: #eee;
+
+  transition: 0.4s;
+}
+
+.full-specs span {
+  margin-left: 5rem;
+
+  font-size: 3ch;
+}
+
+/* /Full specs button */
+
+/* Full specs text */
+.main-text {
+  display: none;
+  width: 16.5em;
+
+  margin-top: -19.3rem;
+
+  line-height: 24px;
+  border-radius: 10px;
+  background-color: #e9e7e7;
+
+  animation: linear;
+}
+
+.main-text p {
+  display: inline-block;
+
+  width: 16.5em;
+  padding: 1rem;
+
+  font-size: 1.5ch;
+  text-align: left;
+  word-break: normal;
+  white-space: pre-line;
+}
+
+.main-text span {
+  font-weight: var(--bold);
+}
+
+.active {
+  display: block;
+  animation: fadeIn 1s;
+}
+
+.active,
+.full-specs:hover {
+  background-color: #ccc;
+}
+
+/* /Full specs text */
+
+/* Media Query */
+
+@media (max-width: 600px) {
+  .second-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      'header'
+      'img'
+      'options'
+      'specs'
+      '.';
+    row-gap: 3.5rem;
+
+    height: 85rem;
+  }
+
+  .second-container h1 {
+    margin-bottom: 2rem;
+  }
+
+  .second-container img {
+    height: 25rem;
+    width: 25rem;
+  }
+
+  .product-options {
+    margin-top: 0rem;
+  }
+
+  .main-text {
+    margin-top: 0rem;
+  }
+
+  .buy-button img {
+    width: 3.4rem;
+    height: 3.4rem;
+    padding: 15px;
+  }
+}
+
+/* /Media Query */
+
+/* Animations */
+
+@keyframes fadeInRight {
+  0% {
+    transform: translateX(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* /Animations */
+
+.hide {
+  display: none;
+}
+
+/* Design inspired by: https://dribbble.com/shots/8775782-WINTSPO-product-details-page  */

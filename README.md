@@ -15,3 +15,5 @@ Really liked the project as it was my first experience using **HTML / CSS & JS**
 ![127 0 0 1_5500_Macbook%20e-shop_index html](https://user-images.githubusercontent.com/101106849/159813152-c41de029-b803-417c-bf66-15aa7f05db46.png)
 
 > **Note:** The values aren't in screen-relative values, thus resulting in some bugs. Will be fixed when I find time
+
+Design inspired by: https://dribbble.com/shots/8775782-WINTSPO-product-details-page  

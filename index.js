@@ -110,7 +110,7 @@ function landingPageElements(choice) {
         storageSelection[i].innerHTML = buttonTags[choice].storage[i];
       }
       h1Element.innerHTML = names[choice];
-      macbookImgElement.setAttribute('src', '../pngs/MacbookPro13Silver.png');
+      macbookImgElement.setAttribute('src', '../Macbook e-shop/pngs/MacbookPro13Silver.png');
       break;
 
     case 1:
@@ -119,7 +119,7 @@ function landingPageElements(choice) {
         storageSelection[i].innerHTML = buttonTags[choice].storage[i];
       }
       h1Element.innerHTML = names[choice];
-      macbookImgElement.setAttribute('src', '../pngs/MacbookPro16Silver.png');
+      macbookImgElement.setAttribute('src', '../Macbook e-shop/pngs/MacbookPro16Silver.png');
       break;
   }
 }
@@ -129,11 +129,11 @@ function changeImage(choice, _index) {
 
   const macbookImgElement = document.getElementById('macbook-image');
 
-  if (choice == 0 && _index == 1) macbookImgElement.setAttribute('src', '../pngs/MacbookPro13Silver.png');
-  if (choice == 0 && _index == 2) macbookImgElement.setAttribute('src', '../pngs/MacbookPro13SpaceGray.png');
+  if (choice == 0 && _index == 1) macbookImgElement.setAttribute('src', '../Macbook e-shop/pngs/MacbookPro13Silver.png');
+  if (choice == 0 && _index == 2) macbookImgElement.setAttribute('src', '../Macbook e-shop/pngs/MacbookPro13SpaceGray.png');
 
-  if (choice == 1 && _index == 1) macbookImgElement.setAttribute('src', '../pngs/MacbookPro16Silver.png');
-  if (choice == 1 && _index == 2) macbookImgElement.setAttribute('src', '../pngs/MacbookPro16SpaceGray.png');
+  if (choice == 1 && _index == 1) macbookImgElement.setAttribute('src', '../Macbook e-shop/pngs/MacbookPro16Silver.png');
+  if (choice == 1 && _index == 2) macbookImgElement.setAttribute('src', '../Macbook e-shop/pngs/MacbookPro16SpaceGray.png');
 }
 
 

@@ -129,7 +129,7 @@ function changeImage(choice, _index) {
 
   const macbookImgElement = document.getElementById('macbook-image');
 
-  if (choice == 0 && _index == 1) macbookImgElement.setAttribute('src', '../Simple-eShop/pngs/MacbookPro13Silver.png');
+  if (choice == 0 && _index == 1) macbookImgElement.setAttribute('src', './pngs/MacbookPro13Silver.png');
   if (choice == 0 && _index == 2) macbookImgElement.setAttribute('src', './pngs/MacbookPro13SpaceGray.png');
 
   if (choice == 1 && _index == 1) macbookImgElement.setAttribute('src', './pngs/MacbookPro16Silver.png');

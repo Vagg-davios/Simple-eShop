@@ -1,5 +1,7 @@
 # Simple-eShop
 
+https://vagg-davios.github.io/Simple-eShop/
+
 This is a simple project which includes a two item e-shop. 
 Really liked the project as it was my first experience using **HTML / CSS & JS**
 
